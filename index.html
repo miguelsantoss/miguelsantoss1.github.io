@@ -12,16 +12,25 @@
   </head>
 
   <style type="text/css">
-   html { background-color: #fefefe; }
+   html {
+     background-color: #fefefe;
+   }
 
    body {
-     margin: 10% auto;
      color: #444;
      font-family: -apple-system, BlinkMac SystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-     font-size: 1.5em;
+     font-size: 1.4em;
      line-height: 1.6;
+   }
+
+   .container {
+     margin: 10% auto;
      max-width: 700px;
      text-transform: lowercase;
+   }
+
+   h4 {
+     margin: 1em 0;
    }
 
    a {
@@ -30,6 +39,7 @@
    }
 
    a:hover {
+     text-decoration: none;
      background: #07a;
      color: #fefefe;
    }
@@ -46,10 +56,14 @@
 
    .info {
      display: flex;
+     flex-direction: row;
    }
 
    img {
      max-width: 200px;
+     max-height: 200px;
+     width: auto;
+     height: auto;
      margin-top: 20px;
      margin-right: 20px;
    }
@@ -58,32 +72,71 @@
      text-align: center;
    }
 
+   @media only screen and (min-width: 769px) {
+     li:after {
+       content: "-";
+       padding-left: 8px;
+     }
+
+     li:last-child:after {
+       content: "";
+     }
+   }
+
+   @media only screen and (max-width: 768px) {
+     body {
+       font-size: 1.2em;
+     }
+
+
+     .container {
+       margin: 10px;
+     }
+
+     .info {
+       flex-direction: column;
+     }
+
+     ul, .email {
+       text-align: initial;
+     }
+
+     li {
+       text-decoration: initial;
+       display: block;
+     }
+
+     li:before {
+       content: "-";
+       padding-right: 8px;
+     }
+   }
+
   </style>
 
   <body>
-    <h1>About</h1>
-    <hr/>
+    <div class="container">
+      <h1>About</h1>
+      <hr/>
 
-    <section class="info">
-      <img alt="Profile Picture" src="photo.jpg" />
+      <section class="info">
+        <img alt="Profile Picture" src="photo.jpg" />
 
-      <div>
-        <p>Hi! I'm Miguel and I'm a Fullstack Software Developer at <a target="_blank" rel="noopener noreferrer" href="https://www.runtime-revolution.com/">Runtime Revolution</a></p>
+        <div>
+          <p>Hi! My name is Miguel and I'm a Fullstack Software Developer at <a target="_blank" rel="noopener noreferrer" href="https://www.runtime-revolution.com/">Runtime Revolution</a></p>
 
-        <p>Please see my <a href="cv.html">CV</a> for more info</p>
-      </div>
-    </section>
+          <p>Please see my <a href="cv.html">CV</a> for more info</p>
+        </div>
+      </section>
 
-    <section>
-      <h4>You can find me at:</h4>
-      <ul>
-        <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/miguelsantoss1">Github</a> - </li>
-        <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/miguelsantoss/">LinkedIn</a></li>
-      </ul>
-
-      <p class="email">
-        <a target="_blank" rel="noopener noreferrer" href="mailto:miguel.alexandre.santoss@gmail.com">Email: miguel.alexandre.santoss@gmail.com</a>
-      </p>
-    </section>
+      <section>
+        <h4>You can find me at:</h4>
+        <ul>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/miguelsantoss1">Github</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/miguelsantoss/">LinkedIn</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="mailto:miguel.alexandre.santoss@gmail.com">Email: miguel.alexandre.santoss@gmail.com</a></li>
+        </ul>
+      </section>
+    </div>
   </body>
 </html>
