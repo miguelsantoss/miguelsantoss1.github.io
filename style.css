@@ -1,0 +1,104 @@
+html {
+  background-color: #fefefe;
+}
+
+body {
+  color: #444;
+  font-family: -apple-system, BlinkMac SystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.4em;
+  line-height: 1.6;
+}
+
+.container {
+  margin: 7% auto;
+  max-width: 700px;
+  text-transform: lowercase;
+}
+
+h4 {
+  margin: 1em 0;
+}
+
+a {
+  text-decoration: none;
+  color: #07a;
+}
+
+a:hover {
+  text-decoration: none;
+  background: #07a;
+  color: #fefefe;
+}
+
+ul {
+  text-align: center;
+  padding: 0;
+}
+
+li {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.email {
+  text-align: center;
+}
+
+@media only screen and (min-width: 769px) {
+  li:after {
+    content: "-";
+    padding-left: 8px;
+  }
+
+  li:last-child:after {
+    content: "";
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 1em;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 1.2em;
+  }
+
+  .container {
+    margin: 10% 15px;
+  }
+
+  ul, .email {
+    text-align: initial;
+  }
+
+  li {
+    text-decoration: initial;
+    display: block;
+  }
+
+  li:before {
+    content: "-";
+    padding-right: 8px;
+  }
+}
